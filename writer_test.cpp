@@ -17,9 +17,9 @@ int main()
         while(any){
             SharedData s = {0};
             s.send_at = get_current_nanoseconds();
-            s.id = i;
+            s.id = i++;
             buffer->send(s);
-            fs<<"sent data i ="<<i++<<", t= "<<s.send_at<<std::endl;
+            fs<<"sent data:"<<s.id<<", t= "<<s.send_at<<std::endl;
             usleep(100*1000); //100ms
         }
     }

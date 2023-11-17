@@ -42,7 +42,7 @@ void do_reader(pid_t pid, bool create_shm){
                     std::cout<<"min_time="<<(unsigned long long)*sp<<std::endl;
                 }
             }
-            fs<<"received position:"<<s.send_at<<", dt="<<dt<<" ns"<<std::endl;
+            fs<<"received data:"<<s.id<<", t="<<s.send_at<<", dt="<<dt<<" ns"<<std::endl;
         }
     }
 }

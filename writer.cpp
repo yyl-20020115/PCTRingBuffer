@@ -16,9 +16,10 @@ void writer_test()
         bool any = true;
         while(any){
             SharedData s = {0};
+            s.id=i++;
             s.send_at = get_current_nanoseconds();
             buffer->send(s);
-            fs<<"sent data i ="<<i++<<", t= "<<s.send_at<<std::endl;
+            fs<<"sent data:"<<s.id<<", t= "<<s.send_at<<std::endl;
             usleep(100*1000); //100ms
         }
     }
